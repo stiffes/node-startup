@@ -6,6 +6,12 @@ APP_DIR='/var/www/example.com';
 PID_FILE=$APP_DIR/pid/app.pid
 LOG_FILE=$APP_DIR/log/app.log
 
+if [ -f $PIDFILE ]; then
+
+ rm -rf $PIDFILE
+
+fi
+
 ###############
 
 # REDHAT chkconfig header
